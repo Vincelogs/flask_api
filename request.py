@@ -2,11 +2,5 @@
 
 import requests as req
 
-url = 'http://localhost:5000/upload'
-
-with open('sid.jpg', 'rb') as f:
-
-    files = {'image': f}
-
-    r = req.post(url, files=files)
-    print(r.text)
+resp = req.request(method='GET', url="http://www.webcode.me")
+print(resp.text)
